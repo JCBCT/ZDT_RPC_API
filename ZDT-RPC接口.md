@@ -1,5 +1,5 @@
 ## 1. 调用返回区块链总体信息
-###chain/get_info
+### chain/get_info
 ```
 调用参数：
     无
