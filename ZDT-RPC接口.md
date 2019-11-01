@@ -45,10 +45,10 @@
 ### 示例代码
 ```
 调用请求：
-curl -X POST --url http://rpc.zdtchain.com:8888/v1/chain/get_currency_balance -d '{
-"code":"tonydchan123",
-"symbol":"ZING",
-"account":"dvy1opao3uoh"
+~$ curl -X POST --url http://rpc.zdtchain.com:8888/v1/chain/get_currency_balance -d '{
+  "code":"tonydchan123",
+  "symbol":"ZING",
+  "account":"dvy1opao3uoh"
 }'
 
 返回结果：
