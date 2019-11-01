@@ -62,8 +62,9 @@ curl -X POST --url http://rpc.zdtchain.com:8888/v1/chain/get_currency_balance -d
     id：交易ID，字符串
 返回值：
     transaction调用的返回值为查询到的交易描述JSON对象。
-
-###示例代码
+```
+### 示例代码
+```
 调用请求：
 ~$ curl -X GET --url：http://api.zdtchain.com/transaction?trx_id=b4a0634ffbc459563010f4bba5e9ab74cb12897f2b0b719147836cba1be55291
 
