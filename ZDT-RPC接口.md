@@ -211,8 +211,8 @@ curl -X POST --url http://rpc.zdtchain.com:8888/v1/chain/get_currency_balance -d
 }
 ```
 
-## 调用将指定的交易提交到链上
-### 备注：将指定的交易提交到链上，请参考EOS参数标准。
+## 6. 调用将指定的交易提交到链上
+**备注：将指定的交易提交到链上，请参考EOS参数标准。**
 ### chain/push_transaction 
 ```
 调用参数：JSON对象，声明交易、签名等信息，成员如下：
