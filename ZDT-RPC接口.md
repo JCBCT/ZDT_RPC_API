@@ -144,6 +144,7 @@ get_block调用返回描述指定区块数据的JSON对象，其成员如下：
 ```
 调用参数：JSON对象，用来指定要读取信息的账号，其成员如下：
     account_name：账号名称，字符串
+    
 返回值：et_account调用的返回值是描述账号信息的JSON对象，其成员如下：
 	account_name：账号名称
 	permissions: 账号权限集合，权限对象数组，每个权限对象的成员如下：
