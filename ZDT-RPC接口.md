@@ -90,7 +90,178 @@ JSON对象，声明要查询的交易，其成员如下：
 }]
 ```
 
-## 4. 调用返回指定区块的数据
+
+## 4. 调用返回指定地址的交易记录
+
+### history/get_transaction
+```
+调用参数：
+JSON对象，声明要查询的交易地址，其成员如下：
+    address：交易地址，字符串
+    
+返回值：
+    transaction调用的返回值为查询到的交易记录描述JSON对象。
+```
+### 示例代码
+```
+调用请求：
+~$ curl -X GET --url：http://api.zdtchain.com/action?name=c1jpp2fwf3v4&size=20&page=1&token=zom.token
+
+返回结果：
+{
+	"size": 20,
+	"page": 1,
+	"total": 12,
+	"items": [{
+		"act": {
+			"data": {
+				"from": "c1jpp2fwf3v4",
+				"to": "evxbfghgxxzd",
+				"quantity": "1990.00000000 ZOM",
+				"memo": "u4ebf"
+			}
+		},
+		"trx_id": "7cf52d85570ff32989be1f1d97aeb9c67e33930d3f2c2bbe28b777263abe1a63",
+		"block_num": 24678137,
+		"block_time": "2019-11-05T06:09:14.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "c1jpp2fwf3v4",
+				"to": "2lgcmpz2rztk",
+				"quantity": "10.00000000 ZOM",
+				"memo": "destroy"
+			}
+		},
+		"trx_id": "7cf52d85570ff32989be1f1d97aeb9c67e33930d3f2c2bbe28b777263abe1a63",
+		"block_num": 24678137,
+		"block_time": "2019-11-05T06:09:14.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "2lgcmpz2rztk",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "859.96000000 ZOM",
+				"memo": "share_15"
+			}
+		},
+		"trx_id": "4fccd26f2250e42cd3974aa58c6474fae76f0aed12adb2acd777ceba4eec3802",
+		"block_num": 24535926,
+		"block_time": "2019-11-04T10:24:08.500"
+	}, {
+		"act": {
+			"data": {
+				"from": "2lgcmpz2rztk",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "263.16000000 ZOM",
+				"memo": "share_14"
+			}
+		},
+		"trx_id": "3b3ec07977b8e86d876c5c179d70981824e6a0bf076336c503ca6793cc0165fa",
+		"block_num": 24535915,
+		"block_time": "2019-11-04T10:24:03.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "2lgcmpz2rztk",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "867.52000000 ZOM",
+				"memo": "share_8"
+			}
+		},
+		"trx_id": "63b78a1137cac16533395b4b066604770293e5aff2d91369d81e21c934566ed1",
+		"block_num": 24337926,
+		"block_time": "2019-11-03T06:54:08.500"
+	}, {
+		"act": {
+			"data": {
+				"from": "2lgcmpz2rztk",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "88.50000000 ZOM",
+				"memo": "share_6"
+			}
+		},
+		"trx_id": "562d92ceec74f0ed7209dcef51e3dd3b557c1eeabdd6f24469a05f0b7a3d52ed",
+		"block_num": 24337915,
+		"block_time": "2019-11-03T06:54:03.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "c1jpp2fwf3v4",
+				"to": "evxbfghgxxzd",
+				"quantity": "174.12500000 ZOM",
+				"memo": "u4ebf"
+			}
+		},
+		"trx_id": "966a24ab092b1ba2da16fa8cb5af53ed4f99bb84b3e73f58219cba91a3eaaec1",
+		"block_num": 24301825,
+		"block_time": "2019-11-03T01:53:18.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "c1jpp2fwf3v4",
+				"to": "2lgcmpz2rztk",
+				"quantity": "0.87500000 ZOM",
+				"memo": "destroy"
+			}
+		},
+		"trx_id": "966a24ab092b1ba2da16fa8cb5af53ed4f99bb84b3e73f58219cba91a3eaaec1",
+		"block_num": 24301825,
+		"block_time": "2019-11-03T01:53:18.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "2lgcmpz2rztk",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "15.36280000 ZOM",
+				"memo": "cost"
+			}
+		},
+		"trx_id": "c7a0e802b73694e197ff1e7c28a9c3d482d8571d99e29a038cfeb3aefdda36a6",
+		"block_num": 24240834,
+		"block_time": "2019-11-02T17:25:02.500"
+	}, {
+		"act": {
+			"data": {
+				"from": "2lgcmpz2rztk",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "0.68000000 ZOM",
+				"memo": "share_3"
+			}
+		},
+		"trx_id": "253e97052df23d6e52d76a1faaed3bda22cf8392cef7720687429fa86429f77a",
+		"block_num": 23971435,
+		"block_time": "2019-11-01T04:00:03.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "2lgcmpz2rztk",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "75.47830000 ZOM",
+				"memo": "cost"
+			}
+		},
+		"trx_id": "a85bb393a58fc961dd593f663d45821b3e76b60bfe065fbec6072b4d20e00fe6",
+		"block_num": 22685633,
+		"block_time": "2019-10-24T17:25:02.000"
+	}, {
+		"act": {
+			"data": {
+				"from": "upojfuze4arb",
+				"to": "c1jpp2fwf3v4",
+				"quantity": "85.20000000 ZOM",
+				"memo": "cost"
+			}
+		},
+		"trx_id": "5e0abd82f35f3d5d70ef0ce53bba84140cf7ddb6ba367a8a1f6e80ad42f9970e",
+		"block_num": 20043949,
+		"block_time": "2019-10-09T10:31:00.000"
+	}]
+}
+
+```
+
+## 5. 调用返回指定区块的数据
 ### chain/get_block
 ```
 调用参数：
@@ -139,7 +310,7 @@ get_block调用返回描述指定区块数据的JSON对象，其成员如下：
 }
 ```
 
-## 5. 调用返回指定账号的描述信息
+## 6. 调用返回指定账号的描述信息
 ### chain/get_account
 ```
 调用参数：JSON对象，用来指定要读取信息的账号，其成员如下：
@@ -220,7 +391,7 @@ get_block调用返回描述指定区块数据的JSON对象，其成员如下：
 }
 ```
 
-## 6. 调用将指定的交易提交到链上
+## 7. 调用将指定的交易提交到链上
 **备注：将指定的交易提交到链上，请参考EOS参数标准。**
 ### chain/push_transaction 
 ```
@@ -237,7 +408,7 @@ JSON对象，声明交易、签名等信息，成员如下：
 ### 示例代码
 ```
 调用请求：
-~$ curl -X POST --url http://127.0.0.1:8888/v1/chain/push_transaction -d '{
+~$ curl -X POST --url http://rpc.zdtchain.com:8888/v1/chain/push_transaction -d '{
   ...
 }'
 
