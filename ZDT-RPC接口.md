@@ -79,10 +79,10 @@ JSON对象，声明要查询的交易，其成员如下：
     "actions":[{
         "data":{
             "from":"3fo4rl15bxw5",
-	    "to":"wwagwz2l1hxr",
-	    "quantity":"0.17000000 ZING",
-	    "memo":"share_12"
-	}
+	        "to":"wwagwz2l1hxr",
+	        "quantity":"0.17000000 ZING",
+	        "memo":"share_12"
+	    }
     }],
     "irreversible":true,
     "block_id":"016db15332e10493595048f5ad78bd05f378418632bfefdc5588344ddc530a16",
